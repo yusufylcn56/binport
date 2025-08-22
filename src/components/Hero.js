@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import VideoModal from './VideoModal';
 import './Hero.css';
 
 const Hero = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleDemoClick = () => {
+    setIsVideoModalOpen(true);
   };
   return (
     <section id="home" className="hero">
@@ -50,7 +57,7 @@ const Hero = () => {
                 Ücretsiz Danışmanlık
                 <ArrowRight size={18} />
               </button>
-              <button className="btn btn-secondary">
+              <button className="btn btn-secondary" onClick={handleDemoClick}>
                 <Play size={18} />
                 Demo İzle
               </button>
@@ -79,6 +86,13 @@ const Hero = () => {
         <div className="gradient-orb orb-2"></div>
         <div className="gradient-orb orb-3"></div>
       </div>
+      
+      {/* Video Modal */}
+      <VideoModal 
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl="https://www.youtube.com/watch?v=CgitRQXs8kk"
+      />
     </section>
   );
 };

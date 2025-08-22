@@ -1,0 +1,229 @@
+/* Video Modal Styles */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.video-modal-container {
+  background: var(--surface-color);
+  border-radius: 16px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.video-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.video-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal-close:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.video-modal-content {
+  padding: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background: #000;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+/* Dark theme adjustments */
+[data-theme="dark"] .video-modal-container {
+  background: var(--surface-color);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .video-modal-header {
+  background: var(--card-bg);
+  border-bottom-color: var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .video-modal-container {
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+  
+  .video-modal-header {
+    padding: 1rem;
+  }
+  
+  .video-modal-title {
+    font-size: 1.1rem;
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .video-modal-overlay {
+    padding: 0.25rem;
+  }
+  
+  .video-modal-container {
+    border-radius: 8px;
+  }
+  
+  .video-modal-header {
+    padding: 0.75rem;
+  }
+  
+  .video-modal-title {
+    font-size: 1rem;
+  }
+}
+
+/* Animation improvements */
+.video-modal-close {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-modal-close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  opacity: 0.1;
+}
+
+.video-modal-close:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading state for iframe */
+.video-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.video-wrapper.loaded .video-loading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Accessibility improvements */
+.video-modal-close:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.video-iframe:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .video-modal-overlay {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  
+  .video-modal-container {
+    border: 2px solid var(--text-primary);
+  }
+  
+  .video-modal-close {
+    border: 1px solid var(--text-secondary);
+  }
+}
