@@ -1,8 +1,37 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Scroll to section function
+  const scrollToSection = (sectionId) => {
+    // Ana sayfada değilsek, önce ana sayfaya git
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // Sayfa yüklendikten sonra scroll işlemini yap
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
+    } else {
+      // Ana sayfadaysak direkt scroll yap
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Navigate to page function
+  const navigateToPage = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
 
   const socialLinks = [
@@ -29,19 +58,19 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: "Ana Sayfa", href: "#home" },
-    { name: "Hizmetler", href: "#services" },
-    { name: "Hakkımızda", href: "#about" },
-    { name: "İletişim", href: "#contact" }
+    { name: "Ana Sayfa", action: () => scrollToSection('home') },
+    { name: "Hizmetler", action: () => scrollToSection('services') },
+    { name: "Hakkımızda", action: () => scrollToSection('about') },
+    { name: "İletişim", action: () => scrollToSection('contact') }
   ];
 
   const services = [
-    { name: "Eğitim", href: "#services" },
-    { name: "Destek", href: "#services" },
-    { name: "Projeler", href: "#services" },
-    { name: "Lisans", href: "#services" },
-    { name: "Kurumsal Hizmetler", href: "#services" },
-    { name: "Bakım", href: "#services" }
+    { name: "Eğitim", action: () => navigateToPage('/egitim') },
+    { name: "Destek", action: () => navigateToPage('/destek') },
+    { name: "Projeler", action: () => navigateToPage('/projeler') },
+    { name: "Lisans", action: () => navigateToPage('/lisans') },
+    { name: "Kurumsal Hizmetler", action: () => navigateToPage('/kurumsal-hizmetler') },
+    { name: "Bakım", action: () => navigateToPage('/bakim') }
   ];
 
   return (
@@ -78,7 +107,12 @@ const Footer = () => {
             <ul className="footer-links">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href}>{link.name}</a>
+                  <button 
+                    onClick={link.action}
+                    className="footer-link-button"
+                  >
+                    {link.name}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -89,7 +123,12 @@ const Footer = () => {
             <ul className="footer-links">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a href={service.href}>{service.name}</a>
+                  <button 
+                    onClick={service.action}
+                    className="footer-link-button"
+                  >
+                    {service.name}
+                  </button>
                 </li>
               ))}
             </ul>
