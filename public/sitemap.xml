@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Ana Sayfa -->
+<url>
+  <loc>https://binport.com.tr/</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<!-- Çözümler -->
+<url>
+  <loc>https://binport.com.tr/kobi-cozumleri</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/erp-cozumleri</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/ik-cozumleri</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/proje-cozumleri</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/isg-cozumleri</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/is-analitigi</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- E-Çözümler -->
+<url>
+  <loc>https://binport.com.tr/e-fatura</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/e-arsiv</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/e-defter</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/e-mutabakat</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/e-irsaliye</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/e-ekstre</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/logo-connect-banka</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/logo-connect-fda</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/logo-connect-b2b</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/go-garanti</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Hizmetler -->
+<url>
+  <loc>https://binport.com.tr/egitim</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/destek</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/kurumsal-hizmetler</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/bakim</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/lisans</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://binport.com.tr/projeler</loc>
+  <lastmod>2024-01-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+</urlset>
