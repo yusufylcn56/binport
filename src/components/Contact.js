@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +10,8 @@ const Contact = () => {
     company: '',
     message: ''
   });
+  
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,10 +22,49 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form gönderme işlemi burada yapılacak
-    // TODO: EmailJS veya backend API entegrasyonu yapılacak
-    alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
+    
+    // Form validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      alert('Lütfen zorunlu alanları doldurun.');
+      return;
+    }
+    
+    // Email subject ve body hazırla
+    const subject = `Binport İletişim Formu - ${formData.name}`;
+    const body = `
+Merhaba Binport Ekibi,
+
+İletişim Bilgileri:
+━━━━━━━━━━━━━━━━━━━━━
+📝 Ad Soyad: ${formData.name}
+📧 E-posta: ${formData.email}
+🏢 Şirket: ${formData.company || 'Belirtilmedi'}
+
+💬 Mesaj:
+━━━━━━━━━━━━━━━━━━━━━
+${formData.message}
+
+━━━━━━━━━━━━━━━━━━━━━
+Bu mesaj binport.com.tr web sitesinden gönderilmiştir.
+Tarih: ${new Date().toLocaleString('tr-TR')}
+    `.trim();
+    
+    // Mailto link oluştur
+    const mailtoLink = `mailto:info@binport.com.tr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Email istemcisini aç
+    window.location.href = mailtoLink;
+    
+    // Success mesajı göster
+    setShowSuccess(true);
+    
+    // Formu temizle
     setFormData({ name: '', email: '', company: '', message: '' });
+    
+    // Success mesajını 5 saniye sonra gizle
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
   };
 
   const contactInfo = [
@@ -43,7 +84,7 @@ const Contact = () => {
       icon: <MapPin size={24} />,
       title: "Adres",
       info: "Kaptanpaşa Mahallesi Halit Ziya Türkkan Sokak Famas Plaza A Blok Kat:5/19 Şişli/İstanbul",
-      link: "#"
+      link: "https://maps.google.com/?q=Kaptanpaşa+Mahallesi+Halit+Ziya+Türkkan+Sokak+Famas+Plaza+A+Blok+Kat:5/19+Şişli/İstanbul"
     }
   ];
 
@@ -84,6 +125,8 @@ const Contact = () => {
                 <motion.a
                   key={index}
                   href={item.link}
+                  target={item.title === "Adres" ? "_blank" : "_self"}
+                  rel={item.title === "Adres" ? "noopener noreferrer" : ""}
                   className="contact-item"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -110,6 +153,18 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <form onSubmit={handleSubmit} className="form">
+              {/* Success Message */}
+              {showSuccess && (
+                <motion.div 
+                  className="success-message"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <CheckCircle size={18} />
+                  <span>Email istemciniz açıldı! Mesajınızı gönderebilirsiniz.</span>
+                </motion.div>
+              )}
               <div className="form-group">
                 <label htmlFor="name">Ad Soyad *</label>
                 <input
