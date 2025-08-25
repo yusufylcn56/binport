@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Phone, Mail } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 
@@ -36,9 +36,9 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      icon: <Github size={20} />,
-      href: "https://github.com/binport",
-      label: "GitHub"
+      icon: <Facebook size={20} />,
+      href: "https://www.facebook.com/binportyazilim/",
+      label: "Facebook"
     },
     {
       icon: <Linkedin size={20} />,
@@ -46,9 +46,9 @@ const Footer = () => {
       label: "LinkedIn"
     },
     {
-      icon: <Twitter size={20} />,
-      href: "https://twitter.com/binport",
-      label: "Twitter"
+      icon: <Phone size={20} />,
+      href: "tel:0212 320 02 53 54",
+      label: "Telefon"
     },
     {
       icon: <Mail size={20} />,
