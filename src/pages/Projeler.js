@@ -128,7 +128,7 @@ const Projeler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🚀 Proje Türlerimiz</h2>
               <p>
                 İşletmenizin özel ihtiyaçlarına yönelik tasarladığımız proje çözümleri ile 
@@ -177,7 +177,7 @@ const Projeler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>✨ Proje Özelliklerimiz</h2>
               <p>
                 Projelerimizi başarıya ulaştıran özel yaklaşımımız ve 
@@ -213,7 +213,7 @@ const Projeler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🏆 Başarılı Projelerimiz</h2>
               <p>
                 Logo sistemleri alanında gerçekleştirdiğimiz başarılı projeler ve 
@@ -250,7 +250,7 @@ const Projeler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🚀 Proje Sürecimiz</h2>
               <p>
                 Projelerinizi baştan sona profesyonel bir yaklaşımla yönetiyoruz. 

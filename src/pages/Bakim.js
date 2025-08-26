@@ -124,7 +124,7 @@ const Bakim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🔧 Bakım Hizmet Türlerimiz</h2>
               <p>
                 Logo sistemlerinizin optimum performansta çalışması için tasarlanmış 
@@ -173,7 +173,7 @@ const Bakim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🔧 Bakım Hizmet Özelliklerimiz</h2>
               <p>
                 Bakım hizmetlerimizi özel kılan avantajlar ve 
@@ -209,7 +209,7 @@ const Bakim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📦 Bakım Paketlerimiz</h2>
               <p>
                 İşletmenizin ihtiyaçlarına ve bütçenize uygun bakım paketi seçeneklerimiz.
@@ -244,7 +244,7 @@ const Bakim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <div className="section-header-enhanced">
+              <div className="section-header-plain">
               <h2>🔧 Bakım Sürecimiz</h2>
               <p>
                 Sistemlerinizin sorunsuz çalışması için tasarlanmış adım adım bakım sürecimiz ile 

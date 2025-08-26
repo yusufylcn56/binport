@@ -96,7 +96,7 @@ const Destek = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🛠️ Destek Türlerimiz</h2>
               <p>
                 7/24 kesintisiz teknik destek hizmetimiz ile Logo sistemlerinizde 
@@ -145,7 +145,7 @@ const Destek = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🛠️ Destek Özelliklerimiz</h2>
               <p>
                 Teknik destek hizmetlerimizi özel kılan avantajlar ve 
@@ -181,7 +181,7 @@ const Destek = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>💼 Danışmanlık Hizmetlerimiz</h2>
               <p>
                 Logo sistemlerinizde uzmanlaşmış ekibimiz ile proje danışmanlığı, 

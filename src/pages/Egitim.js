@@ -77,7 +77,7 @@ const Egitim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📚 Eğitim Programlarımız</h2>
               <p>
                 Logo sistemlerinde uzmanlaşmanız için tasarlanmış kapsamlı eğitim programları. 
@@ -126,7 +126,7 @@ const Egitim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>⭐ Eğitim Özelliklerimiz</h2>
               <p>
                 Eğitim hizmetlerimizi özel kılan avantajlar ve 
@@ -162,7 +162,7 @@ const Egitim = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📚 Eğitim Sürecimiz</h2>
               <p>
                 Etkili öğrenme için tasarlanmış adım adım eğitim sürecimiz ile 

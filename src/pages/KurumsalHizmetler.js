@@ -128,7 +128,7 @@ const KurumsalHizmetler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🏢 Hizmet Türlerimiz</h2>
               <p>
                 Kurumsal ihtiyaçlarınıza özel tasarlanmış kapsamlı hizmet portföyümüz ile 
@@ -177,7 +177,7 @@ const KurumsalHizmetler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🏢 Kurumsal Hizmet Özelliklerimiz</h2>
               <p>
                 Kurumsal hizmetlerimizi özel kılan avantajlar ve 
@@ -213,7 +213,7 @@ const KurumsalHizmetler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>💼 Kurumsal Çözümlerimiz</h2>
               <p>
                 Logo sistemleri alanında kurumsal müşterilerimiz için geliştirdiğimiz 
@@ -249,7 +249,7 @@ const KurumsalHizmetler = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🚀 Kurumsal Hizmet Sürecimiz</h2>
               <p>
                 Kurumsal projelerinizi baştan sona profesyonel bir yaklaşımla yönetiyoruz. 

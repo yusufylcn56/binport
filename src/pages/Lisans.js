@@ -116,7 +116,7 @@ const Lisans = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📄 Lisans Hizmet Türlerimiz</h2>
               <p>
                 Logo ürünlerinizin güncel kalması ve kesintisiz çalışması için tasarlanmış 
@@ -160,7 +160,7 @@ const Lisans = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>🎯 LEM Sözleşmesi Avantajları</h2>
               <p>
                 Logo Enterprise Maintenance sözleşmesinin size sunduğu 
@@ -196,7 +196,7 @@ const Lisans = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📋 LEM Sözleşme Türleri</h2>
               <p>
                 İşletmenizin ihtiyaçlarına ve bütçenize uygun LEM sözleşmesi seçeneklerimiz.
@@ -231,7 +231,7 @@ const Lisans = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <div className="section-header-enhanced">
+            <div className="section-header-plain">
               <h2>📋 Lisans Sürecimiz</h2>
               <p>
                 LEM sözleşmenizi hızlı ve kolay bir şekilde aktive etmek için tasarlanmış 
